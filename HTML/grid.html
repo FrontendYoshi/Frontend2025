@@ -20,7 +20,7 @@
         }
 
         nav {
-            background-color: aqua;
+            background-color: rgb(8, 8, 8);
             grid-column-start: 1;
             grid-column-end: 7;
             /*
@@ -28,8 +28,13 @@
             */
         }
 
+        nav ul {
+            display: flex;
+            gap: 1em;
+        }
+
         main {
-            background-color: aqua;
+            background-color: rgb(3, 3, 3);
 
             grid-column-start: 1;
             grid-column-end: 5;
@@ -39,19 +44,55 @@
         }
 
         aside {
-            background-color: darkgray;
+            background-color: rgb(209, 7, 7);
 
             grid-column-start: 1;
-            grid-column-end: 7;
-            
-            /*grid-row-start: 1;
+            grid-column-end: 1;
+
+            /*grid-row-start: 2;
             */
+        }
+
+        nav ul li {
+            display: block;
+        }
+
+        @media (max-width: 500px) {
+            nav ul {
+                flex-direction: column;   
+                justify-content: end;                      
+            }
+            body {
+                grid-template-rows: 100px auto 40px;
+            }
+            main {
+                display:block
+            }
         }
     </style>
 </head>
+
 <body>
-    <nav>Navigation</nav>
-    <main>Inhalt</main>
+    <nav>
+        <ul>
+            <li><a href="#">Merchandise</a></li>
+            <li><a href="#">Medien</a></li>
+            <li><a href="#">Informationen</a></li>
+            <li><a href="#">Über Uns</a></li>
+            <li><a href="#">Kostenfrei</a></li>
+        </ul>
+    </nav>
+    
+    <main>Inhalt
+        <img src="/home/fullstack/Bilder/Bildschirmfotos/"Bildschirmfoto vom 2025-02-05 09-20-59.png>
+        <ul>
+            <li><a href="#">Text</a></li>
+            <li><a href="#">Text</a></li>
+            <li><a href="#">Text</a></li>
+            <li><a href="#">Text</a></li>
+            <li><a href="#">Text</a></li>
+        </ul>
+    </main>
     <aside>Seitenleiste</aside>
     <footer>Fußzeile</footer>
 </body>
